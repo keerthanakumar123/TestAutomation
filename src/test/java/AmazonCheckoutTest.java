@@ -19,7 +19,7 @@ public class AmazonCheckoutTest {
     }
 
     @Test(priority = 1)
-    public void signin() throws InterruptedException
+    public void signIn() throws InterruptedException
     {
         driver.findElement(By.xpath("//span[contains(text(), 'sign in')]")).click();
         sleep(2000);
