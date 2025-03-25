@@ -66,6 +66,12 @@ public class AmazonCheckoutTest {
         Assert.assertTrue(isPayNowDisplayed);
     }
 
+    @Test(priority = 5)
+    public void verifyPaymentFalseCase() throws InterruptedException {
+        boolean isPayNowDisplayed = driver.findElement(By.xpath("//*[contains(text(),'Use this payment method')]")).isDisplayed();
+        Assert.assertFalse(isPayNowDisplayed);
+    }
+
     @AfterTest
     public void tearDown() {
         if (driver != null) {
